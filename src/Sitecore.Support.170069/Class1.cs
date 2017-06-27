@@ -69,7 +69,7 @@ namespace Sitecore.Support.ExperienceEditor.Speak.Ribbon.Requests.Breadcrumb
     {
         public SupportBreadcrumbItem(Item item, DeviceItem deviceItem):base(item,deviceItem)
         {
-            //fix for the issue 170069 is to use tje GetUIDisplayName() instead of item.DisplayName
+            //fix for the issue 170069 is to use the GetUIDisplayName() instead of item.DisplayName
             this.DisplayName = item.GetUIDisplayName();
         }
     }
@@ -86,7 +86,7 @@ namespace Sitecore.Support.ItemWebApi.Pipelines.GetProperties
             SortedDictionary<string, object> properties = arguments.Properties;
             Assert.IsNotNull(item.Template, "Template is null.");
             properties.Add("Database", item.Database.Name);
-            //fix for the issue 170069 is to use tje GetUIDisplayName() instead of item.DisplayName
+            //fix for the issue 170069 is to use the GetUIDisplayName() instead of item.DisplayName
             properties.Add("DisplayName", item.GetUIDisplayName());
             properties.Add("HasChildren", item.HasChildren);
             properties.Add("ID", item.ID.ToString());
